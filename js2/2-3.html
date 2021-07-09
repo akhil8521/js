@@ -7,35 +7,26 @@
         var n=prompt("Enter any number to sum from 1 through 100");
         f(n);
         function f(n){
-            do{
-                if(n>=1 && n<=100){
-                    var sum=0;
-                    for(var i=1;i<=n;i++){
-                        sum=sum+i;
-                    }
-                    alert("sum of numbers from 1 through "+n+ " is " +sum);
-                    var x=prompt("Do another sum? Press y");
-                    do{
-                        if(x==="y"){
-                            var n1=prompt("Enter any number to sum from 1 through 100");
-                            f(n1);
-                        }
-                        else{
-                            break;
-                        }
-                    }
-                    while(x!="y");
-                    break;
-                }
-                else{
+        do
+        {
+            do
+            {
+                var number = prompt("Enter any top number to sum from 1 through 100: ");
+                number = parseInt(number);
+                if(isNaN(number) || number <1 || number > 100)
+                {
                     alert("Please enter a number between 1 and 100");
-                    var n2=prompt("Enter any number to sum from 1 through 100");
-                    f(n2);
-                    break;
                 }
-
             }
-            while(n);
+            while (isNaN(number) || number <1 || number > 100);
+                var sum = 0; 
+                for (var i = 0; i <= number; i++) { 
+                    sum = sum + i; }
+
+            alert("The sum of the numbers from 1 through " + number + " is " + sum);
+            again = prompt("Do another sum? ('y' for yes)")
+        }
+        while (again === 'y');
         }
         </script>
     </head>

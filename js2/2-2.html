@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF=8">
-        <title> Number grades to Letter Grades</title>
-        <script>
-        do{
-            var number = prompt("Enter number Grade from 0 through 100 \nor Enter 999 to end entries");
-        
-            if (number >= 88 && number <= 100){
-                var output= alert("Number Grade: " + number + "\nLetter Grade is: A")
-            }
-            else if (number> 80 && number <= 87){
-                var output = alert("Number Grade" + number + "\nLetter Grade is: B")
-            }
-            else if (number> 68 && number <= 79) { 
-                var output = alert("Number Grade: " + number + "\nLetter Grade is: C")
-            }
-            else if (number >= 60 && number <= 67){
-                var output = alert("Number Grade: " + number + "\nLetter Grade is: D")
-            }
-            else if (number < 60 ){
-                var output = alert("Number Grade: " + number + "\nLetter Grade is: F")
-            }
-            else if (number=999) {
-                var output = alert("You Entered: " + number + "\nEnding the Application")
-            } 
-        }while(number != 999)
-        </script>
-    </head>
-    <body>
-        <main>
-            <h1>Thanks for using the Number grades to Letter grades application!</h1>
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF=8" />
+    <title>Show letter grade</title>
+    <script>
+      let continueFlag = true;
+      while (numberGrade != 999) {
+        do {
+          var numberGrade = prompt("Enter number Grade from 0 through 100 \n or Enter 999 to end entries");
+
+          if (numberGrade >= 88 && numberGrade <= 100) {
+            alert("number Grade: " + numberGrade + "\nLetter Grade is: A");
+          } else if (numberGrade > 80 && numberGrade <= 87) {
+            alert("number Grade" + numberGrade + "\nLetter Grade is: B");
+          } else if (numberGrade > 68 && numberGrade <= 79) {
+            alert("number Grade: " + numberGrade + "\nLetter Grade is: C");
+          } else if (numberGrade >= 60 && numberGrade <= 67) {
+            alert("number Grade: " + numberGrade + "\nLetter Grade is: D");
+          } else if (numberGrade >= 0 && numberGrade < 60) {
+            alert("number Grade: " + numberGrade + "\nLetter Grade is: F");
+          } else if (numberGrade < 0 || numberGrade > 100) {
+            continueFlag = false;
+          }
+        } while (continueFlag);
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Thanks for using the Show letter grade application!</h1>
+    </main>
+  </body>
 </html>
