@@ -4,25 +4,25 @@
     <meta charset="UTF=8" />
     <title>Show letter grade</title>
     <script>
-      let continueFlag = true;
-      while (numberGrade != 999) {
+      let flag = true;
+      while (nG != 999) {
         do {
-          var numberGrade = prompt("Enter number Grade from 0 through 100 \n or Enter 999 to end entries");
+          var nG = prompt("Enter number Grade from 0 through 100 \n or Enter 999 to end entries");
 
-          if (numberGrade >= 88 && numberGrade <= 100) {
-            alert("number Grade: " + numberGrade + "\nLetter Grade is: A");
-          } else if (numberGrade > 80 && numberGrade <= 87) {
-            alert("number Grade" + numberGrade + "\nLetter Grade is: B");
-          } else if (numberGrade > 68 && numberGrade <= 79) {
-            alert("number Grade: " + numberGrade + "\nLetter Grade is: C");
-          } else if (numberGrade >= 60 && numberGrade <= 67) {
-            alert("number Grade: " + numberGrade + "\nLetter Grade is: D");
-          } else if (numberGrade >= 0 && numberGrade < 60) {
-            alert("number Grade: " + numberGrade + "\nLetter Grade is: F");
-          } else if (numberGrade < 0 || numberGrade > 100) {
-            continueFlag = false;
+          if (nG >= 88 && nG <= 100) {
+            alert("number Grade: " + nG + "\nLetter Grade is: A");
+          } else if (nG > 80 && nG <= 87) {
+            alert("number Grade" + nG + "\nLetter Grade is: B");
+          } else if (nG > 68 && nG <= 79) {
+            alert("number Grade: " + nG + "\nLetter Grade is: C");
+          } else if (nG >= 60 && nG <= 67) {
+            alert("number Grade: " + nG + "\nLetter Grade is: D");
+          } else if (nG >= 0 && nG < 60) {
+            alert("number Grade: " + nG + "\nLetter Grade is: F");
+          } else if (nG < 0 || nG > 100) {
+            flag = false;
           }
-        } while (continueFlag);
+        } while (flag);
       }
     </script>
   </head>
