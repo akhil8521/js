@@ -4,25 +4,25 @@
         <meta charset="UTF=8">
         <title> Sum of Numbers</title>
         <script>
-        //var n=prompt("Enter any number to sum from 1 through 100");
+        //var n=prompt("Enter any Number to sum from 1 through 100");
         do
         {
             do
             {
-                var number = prompt("Enter any top number to sum from 1 through 100: ");
-                number = parseInt(number);
+                var Num = prompt("Enter any top Number to sum from 1 through 100: ");
+                Num = parseInt(Num);
 
-                if(isNaN(number) || number <1 || number > 100)
+                if(isNaN(Num) || Num <1 || Num > 100)
                 {
-                    alert("Please enter a number between 1 and 100");
+                    alert("Please enter a Number between 1 and 100");
                 }
             }
-            while (isNaN(number) || number <1 || number > 100);
+            while (isNaN(Num) || Num <1 || Num > 100);
                 var sum = 0; 
-                for (var i = 0; i <= number; i++) { 
+                for (var i = 0; i <= Num; i++) { 
                     sum = sum + i; }
 
-            alert("The sum of the numbers from 1 through " + number + " is " + sum);
+            alert("The sum of the Numbers from 1 through " + Num + " is " + sum);
             again = prompt("Do another sum? ('y' for yes)")
         }
         while (again === 'y');
@@ -30,7 +30,7 @@
     </head>
     <body>
         <main>
-            <h1>Thanks for using the Sum of Numbers application!</h1>
+            <h1>Thanks for using the Sum of Nums application!</h1>
         </main>
     </body>
 </html>
