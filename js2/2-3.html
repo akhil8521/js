@@ -4,15 +4,14 @@
         <meta charset="UTF=8">
         <title> Sum of Numbers</title>
         <script>
-        var n=prompt("Enter any number to sum from 1 through 100");
-        f(n);
-        function f(n){
+        //var n=prompt("Enter any number to sum from 1 through 100");
         do
         {
             do
             {
                 var number = prompt("Enter any top number to sum from 1 through 100: ");
                 number = parseInt(number);
+
                 if(isNaN(number) || number <1 || number > 100)
                 {
                     alert("Please enter a number between 1 and 100");
@@ -27,7 +26,6 @@
             again = prompt("Do another sum? ('y' for yes)")
         }
         while (again === 'y');
-        }
         </script>
     </head>
     <body>
