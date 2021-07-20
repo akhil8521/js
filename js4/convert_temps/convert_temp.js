@@ -3,25 +3,25 @@ var $ = function (id) {
   return document.getElementById(id);
 };
 
-var toC = function () {
+var toCelsius = function () {
   $("degree_label_1").innerHTML = "Enter F degrees:";
   $("degree_label_2").innerHTML = "Degrees Celsius:";
-  cTB();
+  clearTextBoxes();
 };
 
-var toF = function () {
+var toFahrenheit = function () {
   $("degree_label_1").innerHTML = "Enter C degrees:";
   $("degree_label_2").innerHTML = "Degrees Fahrenheit:";
-  cTB();
+  clearTextBoxes();
 };
 
-var cTB = function () {
+var clearTextBoxes = function () {
   $("degrees_entered").value = "";
   $("degrees_computed").value = "";
   $("degrees_entered").focus();
 };
 
-var cT = function () {
+var convertTemp = function () {
   var degrees = parseFloat($("degrees_entered").value);
   var degresStr = $("degrees_entered").value;
 
@@ -42,7 +42,7 @@ var cT = function () {
 
 window.onload = function () {
   $("convert").onclick = convertTemp;
-  $("to_celsius").onclick = toC;
-  $("to_fahrenheit").onclick = toF;
+  $("to_celsius").onclick = toCelsius;
+  $("to_fahrenheit").onclick = toFahrenheit;
   $("degrees_entered").focus();
 };

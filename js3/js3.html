@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Sales Tax Calculator</title>
+
+</head>
+
+<body>
+
+<h1>Sales Tax Calculator</h1>
+
+<p>Enter Subtotal and Tax Rate and click "Calculate"</p>
+
+<table>
+
+<tr>
+
+<td>Subtotal:</td>
+
+<td><input type="text" id="subTotal"></td>
+
+</tr>
+
+<tr>
+
+<td>Tax Rate:</td>
+
+<td><input type="text" id="taxRate"></td>
+
+</tr>
+
+<tr>
+
+<td>Sales Tax:</td>
+
+<td><input type="text" id="salesTax" disabled></td>
+
+</tr>
+
+<tr>
+
+<td>Total:</td>
+
+<td><input type="text" id="total" disabled></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>
+
+<input type="submit" id="submit" value="Calculate" onclick="processEntries()">
+
+<input type="reset" id="clear" value="Clear" onclick="clearForm()">
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+
