@@ -1,3 +1,9 @@
+/*
+Javascript Assignment 4
+Name: Akhil Jahagirdar 
+Student ID: 8742662
+Description: An App that displays only one answer at a time.
+ */
 "use strict";
 var $ = function (id) {
   return document.getElementById(id);
@@ -8,25 +14,24 @@ var toggle = function () {
   var h2 = this; // clicked h2 tag
   var div = h2.nextElementSibling; // h2 tag's sibling div tag
 
-  // toggle plus and minus image in h2 elements by adding or removing a class
+// toggle plus and minus image in h2 elements by adding or removing a class
   if (h2.hasAttribute("class")) {
     h2.removeAttribute("class");
   } else {
     h2.setAttribute("class", "minus");
   }
 
-  // toggle div visibility by adding or removing a class
+// toggle between classes
   if (div.hasAttribute("class")) {
     div.removeAttribute("class");
   } else {
     div.setAttribute("class", "open");
   }
-
-  const h2Elements = document.getElementsByTagName("h2"); //get all h2 elements in an array
+//get all h2 elements in an array
+  const h2Elements = document.getElementsByTagName("h2"); 
 
   for (let h2Element of h2Elements) {
     if (h2Element != this) {
-      //make the non-clicked h2's show plus sign and hide corresponding divs by removing their class attributes if any
       h2Element.removeAttribute("class");
       h2Element.nextElementSibling.removeAttribute("class");
     }

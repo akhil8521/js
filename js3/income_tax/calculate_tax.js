@@ -1,9 +1,16 @@
+/*
+Javascript Assignment 3
+Name: Akhil Jahgirdar 
+Student ID: 8742662
+Description: Description: calculate the federal income tax that is owed for a taxable income amount.
+ */
+
 "use strict";
 var $ = function (id) {
     return document.getElementById(id);
 };
 
-
+// Validating the amount given.
 var processEntry = function () {    
     var income = parseInt($("income").value);   
 
@@ -11,14 +18,14 @@ var processEntry = function () {
         alert("Taxable income should be greater than 0 and a valid Number.");
         $("income").focus();
       } else {
-        var tax = calculateTax(income);
+        var tax = calTax(income);
         $("tax").value = tax;
         $("income").focus();        
       }
 
 };
-
-var calculateTax = function (income) {
+// calculating taxes according to income range.
+var calTax = function (income) {
     var tax;
 
     if(income > 0 && income <= 9275) {

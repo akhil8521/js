@@ -1,11 +1,22 @@
+/*
+Javascript Assignment 3
+Name: Akhil Jahagirdar 
+Student ID: 8742662
+Description: An application that tells how many quarters, dimes,
+nickels, and pennies are needed to make change for any amount of change from 0
+through 99 cents.
+ */
+
+
 var $ = function (id) {
   return document.getElementById(id);
 };
-
+// validating the amount should be between 0-99
 function processEntries() {
-  var cents = $("cents").value;
-  if (cents >= 0 && cents <= 99) {
-    makeChange(cents);
+  var cent = $("cents").value;
+  // calculate changes
+  if (cent >= 0 && cent <= 99) {
+    makeChange(cent);
   } else {
     alert("value should be between 0 and 99");
     $("quarters").value = "";
@@ -16,15 +27,15 @@ function processEntries() {
     $("cents").select();
   }
 }
-
-function makeChange(cents) {
-  var quarters = parseInt(cents / 25);
-  cents = cents % 25;
-  var dimes = parseInt(cents / 10);
-  cents = cents % 10;
-  var nickels = parseInt(cents / 5);
-  cents = cents % 5;
-  var pennies = parseInt(cents / 1);
+// Making changes for the specified amount given.
+function makeChange(cent) {
+  var quarters = parseInt(cent / 25);
+  cent = cent % 25;
+  var dimes = parseInt(cent / 10);
+  cent = cent % 10;
+  var nickels = parseInt(cent / 5);
+  cent = cent % 5;
+  var pennies = parseInt(cent / 1);
   $("quarters").value = quarters;
   $("dimes").value = dimes;
   $("nickels").value = nickels;
